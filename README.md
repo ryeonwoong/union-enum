@@ -1,19 +1,25 @@
 # union
 
 #include <stdio.h>
+
 union MyUnion {
     int i;
     float f;
     char str[20];
 };
+
 int main() {
     union MyUnion u;
+
     u.i = 42;
     printf("Integer: %d\n", u.i);
+
     u.f = 3.14;
     printf("Float: %f\n", u.f);
+
     strcpy(u.str, "Hello, Union!");
     printf("String: %s\n", u.str);
+
     return 0;
 }
 
@@ -37,11 +43,13 @@ int main() {
 # enum
 
 #include <stdio.h>
+// 간단한 enum 정의
 enum Boolean {
     false, // 0
     true   // 1
 };
 int main() {
+    // enum 상수 사용
     enum Boolean isTrue = true;
     if (isTrue) {
         printf("isTrue는 참(True)입니다.\n");
